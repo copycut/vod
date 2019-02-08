@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  frontend:
+    build: .
+    image: hexeo/vod
+    command: [ "npm", "run", "start:dev" ]
+    ports:
+      - 3002:3002
+    volumes:
+      - ./src:/opt/src
+      - ./webpack.conf.d:/opt/webpack.conf.d
+      - ./package.json:/opt/package.json
+      - ./postcss.config.js:/opt/postcss.config.js
+      - ./tsconfig.json:/opt/tsconfig.json
