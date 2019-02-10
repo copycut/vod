@@ -1,0 +1,33 @@
+.root {
+  .container {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  .title {
+    font-size: 2rem;
+    color: $purple;
+    line-height: 1;
+    padding-bottom: 1rem;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 4rem;
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .video {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: $tablet) {
+      flex-basis: 30%;
+    }
+  }
+}

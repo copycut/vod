@@ -1,8 +1,12 @@
 module.exports = () => ({
   plugins: {
+    'postcss-prepend-imports': {
+      path: 'src/styles',
+      files: ['variables.scss'],
+    },
     'postcss-easy-import': {
       path: ['src'],
-      extensions: ['.scss', '.css'],
+      extensions: ['.scss'],
     },
     'postcss-simple-vars': {},
     'postcss-calc': {

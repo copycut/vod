@@ -1,0 +1,31 @@
+.root {
+  background-color: $dark-grey;
+  background-image: linear-gradient(
+    0deg,
+    rgba(54, 195, 196, 0.15),
+    rgba(0, 0, 0, 0)
+  );
+
+  .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $grey;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  .legal {
+    color: $grey;
+    text-align: right;
+    font-size: 0.75rem;
+  }
+}

@@ -1,12 +1,14 @@
 import Vue, {CreateElement} from 'vue'
 import {Component, Prop} from 'vue-property-decorator'
-
 import {Props} from 'router/hooks/Root'
+import Header from 'components/Header'
+import Footer from 'components/Footer'
+import minireset from 'minireset.css'
 import style from './Root.scss'
 
 @Component({
   name: 'Root',
-  styles: [style],
+  styles: [minireset, style],
 })
 export default class Root extends Vue implements Props {
   @Prop({type: String})
@@ -25,7 +27,11 @@ export default class Root extends Vue implements Props {
   public render(h: CreateElement): JSX.Element {
     return (
       <div id="app" class={style.app}>
-        <router-view key={this.routePath} />
+        <Header />
+        <div class={style.content}>
+          <router-view key={this.routePath} />
+        </div>
+        <Footer />
       </div>
     )
   }
